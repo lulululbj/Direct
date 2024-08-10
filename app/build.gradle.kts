@@ -23,8 +23,8 @@ plugins {
 //apply plugin: "com.google.firebase.firebase-perf"
 
 val baseVersion = "1.5.5"
-val verName = "${baseVersion}.${getGitHash()}".toString()
-val verCode = 432
+val verName = "${baseVersion}.${getGitHash()}"
+val verCode = getGitCommitCount().toInt() + 432
 
 val localProperties = loadLocalProperties(project)
 val mStorePassword = localProperties.getProperty("storePassword")
