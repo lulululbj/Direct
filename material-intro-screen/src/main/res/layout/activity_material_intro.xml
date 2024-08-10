@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout_slide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <io.github.dreierf.materialintroscreen.widgets.OverScrollViewPager
+        android:id="@+id/view_pager_slides"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingTop="32dp"
+        app:layout_behavior="io.github.dreierf.materialintroscreen.MoveUpBehaviour">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:theme="@style/ColoredButton"
+            android:visibility="invisible"
+            tools:text="Message btn" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/button_background"
+                android:padding="16dp"
+                android:src="@drawable/ic_previous"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/button_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/button_background"
+                android:padding="16dp"
+                android:src="@drawable/ic_skip"
+                android:visibility="gone" />
+
+            <io.github.dreierf.materialintroscreen.widgets.InkPageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                app:animationDuration="320"
+                app:currentPageIndicatorColor="@android:color/white"
+                app:dotDiameter="8dp"
+                app:dotGap="8dp"
+                app:pageIndicatorColor="@android:color/holo_red_light" />
+
+            <ImageButton
+                android:id="@+id/button_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/button_background"
+                android:padding="16dp"
+                android:src="@drawable/ic_next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

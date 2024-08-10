@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit_direct"
+        android:title="@string/edit_direct"/>
+
+    <item
+        android:id="@+id/test_direct"
+        android:title="@string/Test"/>
+
+    <item
+        android:id="@+id/add_direct_launcher"
+        android:title="@string/generate_launcher_shortcuts"/>
+</menu>

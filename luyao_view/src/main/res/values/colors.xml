@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="colorPrimary">#287DFA</color>
+    <color name="addCircleColor">#287DFA</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="title_bg_color">#287DFA</color>
+    <color name="title_text_color">#ffffff</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="main_translucent">#88000000</color>
+    <color name="bar_translucent">#50000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#ACB4BF</color>
+    <color name="red">#EE3B28</color>
+    <color name="high_light_text">#03A9F4</color>
+
+    <color name="first_slide_background">#E91E63</color>
+    <color name="first_slide_buttons">#880E4F</color>
+    <color name="second_slide_background">#9C27B0</color>
+    <color name="second_slide_buttons">#4A148C</color>
+    <color name="third_slide_background">#009688</color>
+    <color name="third_slide_buttons">#004D40</color>
+    <color name="fourth_slide_background">#795548</color>
+    <color name="fourth_slide_buttons">#3E2723</color>
+
+    <color name="atl_icon_from_color">#818181</color>
+    <color name="atl_icon_to_color">#FFFFFF</color>
+    <color name="setting_icon_color">#287DFA</color>
+</resources>

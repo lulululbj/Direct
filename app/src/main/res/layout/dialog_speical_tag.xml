@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_bg"
+    android:paddingStart="20dp"
+    android:paddingTop="40dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/special_tag_tip"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/star_use"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <luyao.ktx.view.ClearEditText
+            android:id="@+id/starTagEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/recent_use"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <luyao.ktx.view.ClearEditText
+            android:id="@+id/recentTagEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/History"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <luyao.ktx.view.ClearEditText
+            android:id="@+id/historyTagEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/default_input_when_open"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <luyao.ktx.view.ClearEditText
+            android:id="@+id/defaultInputTagEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/callout_engine_tag"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <luyao.ktx.view.ClearEditText
+            android:id="@+id/queryEngineTagEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

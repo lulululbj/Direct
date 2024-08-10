@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/enter_0"
+        android:title="@string/open_default_search_engine"/>
+
+    <item
+        android:id="@+id/enter_1"
+        android:title="@string/open_search_first_result"/>
+
+    <item
+        android:id="@+id/enter_2"
+        android:title="@string/do_nothing"/>
+</menu>

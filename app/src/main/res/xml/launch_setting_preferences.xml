@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <Preference
+        android:icon="@drawable/ic_setting_main_content"
+        android:key="defaultShow"
+        android:title="@string/content_on_home_page" />
+
+    <Preference
+        android:icon="@drawable/ic_setting_icon"
+        android:key="iconPack"
+        android:title="@string/global_icon_pack" />
+</PreferenceScreen>

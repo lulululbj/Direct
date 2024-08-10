@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/imageUrl"
+        android:title="@string/input_image_address"/>
+
+    <item
+        android:id="@+id/chooseFile"
+        android:title="@string/choose_image"/>
+
+    <item
+        android:id="@+id/chooseApp"
+        android:title="@string/choose_app_icon"/>
+</menu>

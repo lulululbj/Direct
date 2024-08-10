@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Cancel">取消</string>
+    <string name="Confirm">确认</string>
+    <string name="Note">提示</string>
+</resources>

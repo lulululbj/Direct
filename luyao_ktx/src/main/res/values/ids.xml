@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="status_bar_view" type="id"/>
+    <item name="navigation_bar_view" type="id"/>
+    <item name="navigation_height_live_data" type="id"/>
+</resources>

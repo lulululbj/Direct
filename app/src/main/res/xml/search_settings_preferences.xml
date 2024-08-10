@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/Browser">
+
+        <Preference
+            android:key="defaultBrowser"
+            android:title="@string/default_open_browser"
+            app:icon="@drawable/ic_browser" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/geek_setting">
+
+        <Preference
+            app:icon="@drawable/ic_setting_special_search"
+            app:key="specialTag"
+            app:title="@string/special_search" />
+
+
+        <Preference
+            app:icon="@drawable/ic_keyboard_enter"
+            app:key="enterChoice"
+            app:title="@string/ims_search_option" />
+
+<!--        <SwitchPreference-->
+<!--            android:icon="@drawable/ic_last_input_content"-->
+<!--            android:key="hintContentWhenLaunch"-->
+<!--            android:title="启动时展示上次搜索内容" />-->
+
+<!--        <SwitchPreference-->
+<!--            app:key="enterIfNoSearchResult"-->
+<!--            android:title="@string/open_search_first_result_if_no"/>-->
+
+        <SwitchPreference
+            app:icon="@drawable/ic_settings_clear"
+            app:key="showLastSearch"
+            app:summary="@string/whether_to_clear_search_input"
+            app:title="@string/clear_search_content" />
+
+        <SwitchPreference
+            app:key="selectLastSearch"
+            android:title="@string/default_selection_last_search"
+            android:summary="@string/default_selection_last_search_note"/>
+
+        <SwitchPreference
+            android:summary="@string/auto_show_engine_note"
+            app:icon="@drawable/ic_setting_show_search"
+            app:key="showSearchEngine"
+            app:title="@string/auto_show_engine" />
+
+        <SwitchPreference
+            android:icon="@drawable/ic_copy"
+            app:key="showClipboardContent"
+            app:title="@string/show_clipboard_content" />
+
+        <SwitchPreference
+            android:icon="@drawable/ic_copy"
+            app:key="autoCopyWhenSearch"
+            app:title="@string/auto_copy_when_search" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/input_association">
+
+        <SwitchPreference
+            android:icon="@drawable/ic_setting_type"
+            android:summary="@string/keyword_association_note"
+            app:key="inputAssociationSwitch"
+            app:title="@string/keyword_association" />
+
+        <Preference
+            android:icon="@drawable/ic_setting_engine"
+            app:key="chooseAssociationEngine"
+            app:title="@string/association_engine" />
+
+        <SwitchPreference
+            android:icon="@drawable/ic_setting_disturb"
+            app:key="onlyAssociationSwitch"
+            app:summary="@string/only_association_note"
+            app:title="@string/only_association" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/history_record">
+
+        <SwitchPreference
+            android:icon="@drawable/ic_setting_history"
+            app:key="historySwitch"
+            app:title="@string/whether_save_history" />
+
+        <Preference
+            android:icon="@drawable/ic_setting_clean"
+            app:key="clearHistory"
+            app:title="@string/clear_history_record" />
+
+        <Preference
+            android:icon="@drawable/ic_setting_clean"
+            app:key="clearRecentUse"
+            app:title="@string/clear_recent_record" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/search_switch">
+
+        <SwitchPreference
+            app:icon="@drawable/ic_setting_app"
+            app:key="app"
+            app:summary="@string/search_app_summary"
+            app:title="@string/search_app" />
+
+        <SwitchPreference
+            app:key="systemApp"
+            app:summary="@string/search_system_app_summary"
+            app:title="@string/search_system_app" />
+
+        <SwitchPreference
+            app:icon="@drawable/ic_setting_shortcut"
+            app:key="shortcut"
+            app:summary="@string/search_app_direct_summary"
+            app:title="@string/app_shortcut" />
+
+        <SwitchPreference
+            app:icon="@drawable/ic_contacts"
+            app:key="searchContacts"
+            app:summary="@string/search_contacts_summary"
+            app:title="@string/search_contacts" />
+
+        <SwitchPreference
+            app:icon="@drawable/ic_setting_search"
+            app:key="searchByPackageName"
+            app:summary="@string/search_package_name_summary"
+            app:title="@string/search_package_name" />
+
+        <SwitchPreference
+            app:icon="@drawable/ic_setting_basic"
+            app:key="moreAppInfo"
+            app:summary="@string/more_app_info_summary"
+            app:title="@string/more_app_info" />
+
+        <SwitchPreference
+            app:icon="@drawable/ic_pinyin"
+            app:key="searchByPin"
+            app:summary="@string/pinyin_setting_note"
+            app:title="@string/search_by_pinyin" />
+
+    </PreferenceCategory>
+
+    <SwitchPreference
+        app:icon="@drawable/ic_setting_detail"
+        app:isPreferenceVisible="false"
+        app:key="appDetail"
+        app:summary="@string/app_detail_info_summary"
+        app:title="@string/app_detail_info" />
+
+</PreferenceScreen>

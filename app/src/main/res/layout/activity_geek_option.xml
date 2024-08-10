@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Direct_Bg"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title_layout"/>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/settingsFragment"
+        android:name="luyao.direct.ui.settings.GeekOptionsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

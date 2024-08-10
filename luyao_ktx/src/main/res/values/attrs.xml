@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="AvatarImageView">
+        <attr name="aiv_TextSizeRatio" format="reference|float" />
+        <attr name="aiv_TextMaskRatio" format="reference|float" />
+        <attr name="aiv_BoarderColor" format="reference|color" />
+        <attr name="aiv_TextColor" format="reference|color" />
+        <attr name="aiv_BoarderWidth" format="reference|dimension" />
+        <attr name="aiv_ShowBoarder" format="reference|boolean" />
+        <attr name="aiv_CornerRadius" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="EmptyView">
+        <attr name="ev_emptyImage" format="reference"/>
+        <attr name="ev_emptyText" format="reference|string"/>
+        <attr name="ev_emptyTextSize" format="integer|dimension"/>
+        <attr name="ev_emptyTextColor" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ClearEditText">
+        <attr name="clearDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SquareImageView">
+        <attr name="hwRatio" format="reference|float" />
+    </declare-styleable>
+
+    <declare-styleable name="SettingView">
+        <attr name="settingIcon" format="reference" />
+        <attr name="settingText" format="string|reference" />
+        <attr name="rightText" format="string|reference" />
+        <attr name="settingTextSize" format="integer|dimension" />
+        <attr name="settingTextColor" format="color|reference" />
+        <attr name="showRightArrow" format="boolean" />
+        <attr name="settingPosition" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="single" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AboutView">
+        <attr name="aboutIcon" format="reference" />
+        <attr name="aboutText" format="string|reference" />
+        <attr name="aboutDesc" format="string|reference" />
+        <attr name="aboutTextColor" format="color|reference" />
+        <attr name="aboutDescTextColor" format="color|reference" />
+        <attr name="aboutPosition" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="single" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

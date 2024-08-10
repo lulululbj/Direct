@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+
+    <application
+        android:name="luyao.direct.DirectApp"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Everywhere"
+        tools:targetApi="n">
+        <activity
+            android:name="luyao.direct.ui.DirectActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Translucent"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ASSIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.android.systemui.action_assist_icon"
+                android:resource="@drawable/luyao" />
+        </activity>
+        <!--        <activity-->
+        <!--            android:name="luyao.direct.ui.SplashActivity"-->
+        <!--            android:exported="true"-->
+        <!--            android:theme="@style/Translucent">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
+
+        <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
+        <activity
+            android:name="luyao.direct.ui.settings.SettingsActivity"
+            android:label="@string/setting"
+            android:parentActivityName="luyao.direct.ui.DirectActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="luyao.direct.ui.AboutActivity" />
+        <activity
+            android:name=".ui.settings.BackupActivity"
+            android:label="@string/backup_title"
+            android:parentActivityName=".ui.settings.SettingsActivity" />
+        <activity
+            android:name=".ui.settings.GeekOptionActivity"
+            android:label="@string/geek_setting" />
+        <activity
+            android:name=".ui.settings.SearchSettingsActivity"
+            android:label="@string/Search" />
+        <activity
+            android:name=".ui.settings.LaunchModeSettingsActivity"
+            android:label="@string/launch_mode" />
+        <activity
+            android:name=".ui.settings.SidebarSettingsActivity"
+            android:label="@string/sidebar_setting" />
+<!--        <activity android:name=".ui.settings.ViewSettingActivity"-->
+<!--            android:label="@string/View"/>-->
+        <activity android:name=".ui.ChooseAppActivity" />
+        <activity android:name="luyao.direct.ui.settings.direct.AppDirectListActivity" />
+        <activity android:name="luyao.direct.ui.engine.EngineManageActivity" />
+        <activity android:name="luyao.direct.ui.gesture.GestureConfigActivity" />
+        <activity android:name="luyao.direct.ui.NewAboutActivity" />
+
+        <!--        <service android:name="luyao.direct.service.DirectService" />-->
+
+        <service
+            android:name=".service.DirectTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_tile"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".service.StarWidgetProvider"
+            android:exported="true"
+            android:label="@string/star_use">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/direct_appwidget_info" />
+        </receiver>
+        <receiver
+            android:name=".service.RecentWidgetProvider"
+            android:exported="true"
+            android:label="@string/recent_use">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/direct_appwidget_info" />
+        </receiver>
+
+        <service
+            android:name=".service.StarWidgetRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+            android:name=".service.RecentWidgetRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+            android:name=".util.customtab.KeepAliveService"
+            android:exported="true" />
+        <!--        <receiver android:name=".service.DirectReplyReceiver"/>-->
+        <meta-data
+            android:name="CHANNEL"
+            android:value="${CHANNEL}" />
+
+        <!--        <receiver android:name="com.catchingnow.icebox.sdk_client.StateReceiver">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.catchingnow.icebox.SDK_STATE"/>-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 告知 XXPermissions 当前项目已经适配了分区存储特性 -->
+        <meta-data
+            android:name="ScopedStorage"
+            android:value="true" />
+    </application>
+
+</manifest>

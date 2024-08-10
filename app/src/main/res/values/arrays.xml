@@ -1,0 +1,12 @@
+<resources>
+    <string-array name="default_show">
+        <item>搜索引擎</item>
+        <item>星标</item>
+        <item>最近使用</item>
+    </string-array>
+    <string-array name="night_mode">
+        <item>@string/mode_light</item>
+        <item>@string/mode_night</item>
+        <item>@string/mode_system</item>
+    </string-array>
+</resources>

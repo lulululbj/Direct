@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Direct_Bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title_layout" />
+
+    <luyao.ktx.view.SettingView
+        android:id="@+id/launchMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:settingIcon="@drawable/ic_launch"
+        app:settingText="@string/launch_mode"
+        app:settingPosition="top"
+        android:layout_marginHorizontal="16dp"/>
+
+    <luyao.ktx.view.SettingView
+        android:id="@+id/searchSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:settingIcon="@drawable/ic_setting_search"
+        app:settingText="@string/Search"
+        app:settingPosition="middle"
+        android:layout_marginHorizontal="16dp"/>
+
+    <luyao.ktx.view.SettingView
+        android:id="@+id/geekSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:settingIcon="@drawable/ic_setting_basic"
+        app:settingText="@string/geek_setting"
+        app:settingPosition="middle"
+        android:layout_marginHorizontal="16dp"/>
+
+    <luyao.ktx.view.SettingView
+        android:id="@+id/backup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:settingIcon="@drawable/ic_setting_backup"
+        app:settingText="@string/backup_title"
+        app:settingPosition="middle"
+        android:layout_marginHorizontal="16dp"/>
+
+    <luyao.ktx.view.SettingView
+        android:id="@+id/checkUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:settingIcon="@drawable/ic_setting_update"
+        app:settingText="@string/check_update"
+        app:settingPosition="middle"
+        android:layout_marginHorizontal="16dp"/>
+
+    <luyao.ktx.view.SettingView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:settingIcon="@drawable/ic_setting_info"
+        app:settingText="@string/about"
+        app:settingPosition="bottom"
+        android:layout_marginHorizontal="16dp"/>
+
+
+</LinearLayout>

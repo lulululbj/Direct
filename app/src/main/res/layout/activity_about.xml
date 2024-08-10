@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Direct_Bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="40dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="36dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_launcher_round"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/versionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                tools:text="v1.0.0"
+                app:layout_constraintStart_toStartOf="@id/icon"
+                app:layout_constraintEnd_toEndOf="@id/icon"
+                app:layout_constraintTop_toBottomOf="@id/icon"
+                android:layout_marginTop="8dp"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/sloganTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="@string/slogan"
+                app:layout_constraintStart_toStartOf="@id/icon"
+                app:layout_constraintEnd_toEndOf="@id/icon"
+                app:layout_constraintTop_toBottomOf="@id/versionTv"
+                android:layout_marginTop="12dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/whyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="为什么要做好好记录？"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sloganTv"
+                android:layout_marginTop="36dp"/>
+
+            <TextView
+                android:id="@+id/reasonTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_middle_direct"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/whyTv"
+                android:layout_marginTop="12dp"
+                android:text="@string/direct_reason"
+                android:textSize="14dp"
+                android:textColor="@color/color_333333"
+                android:lineSpacingExtra="4dp"
+                android:padding="12dp"/>
+
+            <TextView
+                android:id="@+id/develop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="开发者"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reasonTv"
+                android:layout_marginTop="12dp"/>
+
+            <luyao.ktx.view.AboutView
+                android:id="@+id/aboutDeveloper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/develop"
+                android:layout_marginTop="16dp"
+                app:aboutIcon="@drawable/luyao"
+                app:aboutText="路遥"
+                app:aboutDesc="微信：bingxinshuo_"
+                app:aboutPosition="single"/>
+
+            <TextView
+                android:id="@+id/feedbackTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="意见反馈"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aboutDeveloper"
+                android:layout_marginTop="12dp"/>
+
+            <luyao.ktx.view.AboutView
+                android:id="@+id/aboutMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/feedbackTv"
+                android:layout_marginTop="16dp"
+                app:aboutIcon="@drawable/ic_gmail"
+                app:aboutText="邮箱"
+                app:aboutDesc="sunluyao1993x@gmail.com"
+                app:aboutPosition="top"/>
+
+            <luyao.ktx.view.AboutView
+                android:id="@+id/aboutQQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aboutMail"
+                app:aboutIcon="@drawable/ic_qq"
+                app:aboutText="QQ"
+                app:aboutDesc="好好记录和它的用户们"
+                app:aboutPosition="bottom"/>
+
+            <TextView
+                android:id="@+id/otherTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="其他"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aboutQQ"
+                android:layout_marginTop="12dp"/>
+
+            <luyao.ktx.view.SettingView
+                android:id="@+id/secretLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingText="隐私政策"
+                app:settingPosition="top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/otherTv"
+                android:layout_marginTop="16dp"/>
+
+            <luyao.ktx.view.SettingView
+                android:id="@+id/userLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingText="用户协议"
+                app:settingPosition="middle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secretLicense"/>
+
+            <luyao.ktx.view.SettingView
+                android:id="@+id/openLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:settingText="开源许可"
+                app:settingPosition="bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userLicense"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>

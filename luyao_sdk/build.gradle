@@ -1,0 +1,81 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 31
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    api "org.jetbrains.kotlin:kotlin-stdlib:1.5.31"
+    api 'androidx.appcompat:appcompat:1.3.1'
+    api 'com.google.android.material:material:1.3.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.0'
+    api 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    api 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    api 'com.tencent:mmkv-static:1.2.9'
+
+    def room_version = "2.4.0-beta02"
+    api "androidx.room:room-runtime:$room_version"
+    api("androidx.room:room-ktx:$room_version")
+    kapt "androidx.room:room-compiler:$room_version"
+
+    api 'androidx.lifecycle:lifecycle-service:2.4.0-alpha01'
+    api 'com.afollestad.material-dialogs:core:3.3.0'
+    api 'com.drakeet.multitype:multitype:4.3.0'
+    api 'com.drakeet.about:about:2.4.1'
+    api 'com.guolindev.permissionx:permissionx:1.5.1'
+    api 'com.airbnb.android:lottie:4.1.0'
+    api("com.squareup.moshi:moshi:1.12.0")
+    api 'com.github.bumptech.glide:glide:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    api("com.github.thegrizzlylabs:sardine-android:0.8") {
+        exclude group: 'com.squareup.okhttp3'
+        exclude module: 'stax'
+        exclude module: 'stax-api'
+        exclude module: 'xpp3'
+    }
+    api 'com.github.tingyik90:snackprogressbar:6.4.2'
+    api "com.github.skydoves:colorpickerview:2.2.3"
+    api 'com.jaredrummler:colorpicker:1.1.0'
+    api 'com.github.getActivity:ShapeView:6.2'
+    api 'de.hdodenhof:circleimageview:3.1.0'
+    api 'com.jakewharton.timber:timber:5.0.1'
+    api 'com.github.princekin-f:EasyFloat:2.0.4'
+//    api 'com.github.iammert:AnimatedTabLayout:0.1'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}

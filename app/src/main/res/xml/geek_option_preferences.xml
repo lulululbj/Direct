@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:icon="@drawable/ic_setting_main_content"
+        android:key="defaultShow"
+        android:title="@string/content_on_home_page" />
+
+    <Preference
+        android:icon="@drawable/ic_setting_icon"
+        android:key="iconPack"
+        android:title="@string/global_icon_pack" />
+
+    <SwitchPreference
+        android:key="showKeyboard"
+        android:icon="@drawable/ic_keyboard_show"
+        android:title="@string/default_show_keyboard"/>
+
+    <SwitchPreference
+        android:icon="@drawable/ic_secret"
+        android:key="removeTask"
+        android:summary="@string/remove_recent_task"
+        android:title="@string/traceless_use"/>
+
+    <SwitchPreference
+        android:icon="@drawable/ic_power_off"
+        android:key="autoClose"
+        android:title="@string/auto_close_note" />
+
+    <SwitchPreference
+        android:icon="@drawable/ic_tab"
+        android:key="chromeTab"
+        android:summary="@string/open_chrome_custom_tab"
+        android:title="Chrome Custom Tab" />
+
+</PreferenceScreen>

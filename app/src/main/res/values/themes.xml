@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Everywhere" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryVariant">@color/colorPrimary</item>-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+        <!-- Secondary brand color. -->
+<!--        <item name="colorSecondary">@color/colorPrimary</item>-->
+<!--        <item name="colorSecondaryVariant">@color/colorPrimary</item>-->
+<!--        <item name="colorOnSecondary">@color/white</item>-->
+        <!-- Status bar color. -->
+        <!-- Optional: set to transparent if your app is drawing behind the status bar. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- Optional: set the status bar light and content dark. -->
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:actionMenuTextColor">@color/title_text_color</item>
+    </style>
+
+    <style name="Translucent" parent="Theme.Everywhere">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>

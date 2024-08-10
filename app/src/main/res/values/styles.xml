@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="ToolPopupStyle">
+        <item name="android:windowEnterAnimation">@anim/anim_popup_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_popup_bottom_out</item>
+    </style>
+
+    <style name="Direct_Toolbar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:actionMenuTextColor">@color/title_text_color</item>
+
+    </style>
+
+    <style name="Direct_Bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">?attr/colorSurfaceContainerLow</item>
+    </style>
+
+</resources>

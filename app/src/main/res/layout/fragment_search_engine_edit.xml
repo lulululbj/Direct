@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/engineIconTv"
+            style="@style/Panel_Setting_Tv"
+            android:text="@string/manager_search_engine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/engineHelp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="7dp"
+            android:src="@drawable/ic_help"
+            app:layout_constraintTop_toTopOf="@id/engineIconTv"
+            app:layout_constraintBottom_toBottomOf="@id/engineIconTv"
+            app:layout_constraintStart_toEndOf="@id/engineIconTv"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/engineRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/engineIconTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

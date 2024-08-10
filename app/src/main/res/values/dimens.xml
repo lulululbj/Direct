@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="seekbar_min_width">60dp</dimen>
+    <dimen name="tab_size">40dp</dimen>
+    <dimen name="tab_space">6dp</dimen>
+</resources>

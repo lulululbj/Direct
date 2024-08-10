@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/historyRoot"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_history"
+        android:clickable="true"
+        android:padding="10dp">
+
+        <luyao.view.MarqueeTextView
+            android:id="@+id/historyName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            tools:text="测试"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/historyBt"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_clear_text" />
+
+    </LinearLayout>
+
+</FrameLayout>

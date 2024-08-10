@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/packageName"
+        app:layout_constraintEnd_toStartOf="@id/startBt"
+        app:layout_constraintStart_toEndOf="@id/appIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="微信" />
+
+    <TextView
+        android:id="@+id/packageName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/versionName"
+        app:layout_constraintEnd_toStartOf="@id/startBt"
+        app:layout_constraintStart_toEndOf="@id/appIcon"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        tools:text="com.tencent.mm"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/versionName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/startBt"
+        app:layout_constraintStart_toEndOf="@id/appIcon"
+        app:layout_constraintTop_toBottomOf="@id/packageName"
+        tools:text="com.tencent.mm"
+        android:visibility="gone"/>
+
+    <com.sackcentury.shinebuttonlib.ShineButton
+        android:id="@+id/iceBt"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="4dp"
+        android:src="@android:color/darker_gray"
+        app:btn_color="@android:color/darker_gray"
+        app:btn_fill_color="@color/colorPrimary"
+        app:allow_random_color="false"
+        app:enable_flashing="false"
+        app:big_shine_color="@color/colorPrimary"
+        app:click_animation_duration="200"
+        app:shine_animation_duration="500"
+        app:shine_turn_angle="10"
+        app:small_shine_offset_angle="20"
+        app:shine_distance_multiple="1.5"
+        app:small_shine_color="#CC9999"
+        app:shine_count="8"
+        app:siShape="@drawable/ice"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/startBt"
+        app:layout_goneMarginEnd="6dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.sackcentury.shinebuttonlib.ShineButton
+        android:id="@+id/startBt"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="4dp"
+        android:src="@android:color/darker_gray"
+        app:btn_color="@android:color/darker_gray"
+        app:btn_fill_color="@color/colorAccent"
+        app:allow_random_color="false"
+        app:enable_flashing="false"
+        app:big_shine_color="@color/colorAccent"
+        app:click_animation_duration="200"
+        app:shine_animation_duration="500"
+        app:shine_turn_angle="10"
+        app:small_shine_offset_angle="20"
+        app:shine_distance_multiple="1.5"
+        app:small_shine_color="#CC9999"
+        app:shine_count="8"
+        app:siShape="@raw/star"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

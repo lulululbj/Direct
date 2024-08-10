@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/quick_start">
+
+        <Preference
+            android:icon="@drawable/ic_setting_main_content"
+            android:key="setAssist"
+            android:summary="@string/assist_summary"
+            android:title="@string/assist_title" />
+
+        <SwitchPreference
+            app:icon="@drawable/ic_notification"
+            app:key="needNotification"
+            app:summary="@string/notification_bar_summary"
+            app:title="@string/notification_bar" />
+
+        <Preference
+            app:key="sideBarSetting"
+            android:icon="@drawable/ic_side_bar"
+            android:title="悬浮窗设置"/>
+
+
+    </PreferenceCategory>
+
+<!--    <PreferenceCategory app:title="@string/notification">-->
+
+
+<!--        <SwitchPreference-->
+<!--            app:key="needNotificationStar"-->
+<!--            app:summary="@string/notification_star_summary"-->
+<!--            app:title="@string/star_use" />-->
+
+<!--        <SwitchPreference-->
+<!--            app:key="needNotificationRecent"-->
+<!--            app:summary="@string/notification_recent_summary"-->
+<!--            app:title="@string/recent_use" />-->
+<!--    </PreferenceCategory>-->
+</PreferenceScreen>

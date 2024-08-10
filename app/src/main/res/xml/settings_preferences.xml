@@ -1,0 +1,83 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Preference
+        android:icon="@drawable/ic_launch"
+        android:key="launch"
+        app:title="@string/launch_mode" >
+        <intent
+            android:targetClass="luyao.direct.ui.settings.LaunchModeSettingsActivity"
+            android:targetPackage="@string/package_name"/>
+    </Preference>
+
+
+<!--    <Preference-->
+<!--        android:icon="@drawable/ic_setting_view"-->
+<!--        android:key="view"-->
+<!--        android:title="@string/View" >-->
+<!--        <intent-->
+<!--            android:targetClass="luyao.direct.ui.settings.ViewSettingActivity"-->
+<!--            android:targetPackage="luyao.direct"/>-->
+<!--    </Preference>-->
+
+    <Preference
+        android:icon="@drawable/ic_setting_search"
+        android:key="search"
+        android:title="@string/Search" >
+        <intent
+            android:targetClass="luyao.direct.ui.settings.SearchSettingsActivity"
+            android:targetPackage="@string/package_name"/>
+    </Preference>
+
+
+    <Preference
+        android:icon="@drawable/ic_setting_basic"
+        android:key="geekSetting"
+        android:title="@string/geek_setting" >
+        <intent
+            android:targetClass="luyao.direct.ui.settings.GeekOptionActivity"
+            android:targetPackage="@string/package_name"/>
+    </Preference>
+
+    <Preference
+        app:icon="@drawable/ic_setting_backup"
+        app:key="backup"
+        app:title="@string/backup_title" >
+        <intent
+            android:targetClass="luyao.direct.ui.settings.BackupActivity"
+            android:targetPackage="@string/package_name"/>
+    </Preference>
+
+    <Preference
+        android:icon="@drawable/ic_setting_update"
+        android:key="update"
+        android:title="@string/check_update" />
+
+    <Preference
+        android:icon="@drawable/ic_feedback"
+        android:key="feedback"
+        android:title="@string/feedback" />
+
+    <Preference
+        app:icon="@drawable/ic_secret"
+        app:key="secretLicense"
+        app:title="@string/secret_license" />
+
+    <Preference
+        app:icon="@drawable/ic_user_license"
+        app:key="userLicense"
+        app:title="@string/user_license">
+    </Preference>
+
+    <Preference
+        app:icon="@drawable/ic_setting_info"
+        app:key="about"
+        app:title="@string/about">
+        <intent
+            android:targetClass="luyao.direct.ui.NewAboutActivity"
+            android:targetPackage="@string/package_name" />
+    </Preference>
+
+
+</PreferenceScreen>

@@ -1,0 +1,43 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/webdav">
+
+        <Preference
+            app:icon="@drawable/ic_cloud_upload"
+            app:key="connectStatus"
+            app:title="@string/connect_status" />
+
+        <Preference
+            app:key="backupCloud"
+            app:title="@string/backup_to_cloud" />
+
+        <Preference
+            app:key="restoreCloud"
+            app:title="@string/restore_from_cloud" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/Local">
+
+        <Preference
+            android:icon="@drawable/ic_setting_backup"
+            app:key="backupLocal"
+            app:title="@string/backup_to_local" />
+
+        <Preference
+            app:key="restoreLocal"
+            app:title="@string/restore_from_local" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/note">
+
+        <Preference
+            android:icon="@drawable/ic_setting_info"
+            app:key="backupNote"
+            app:title="@string/backup_note" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

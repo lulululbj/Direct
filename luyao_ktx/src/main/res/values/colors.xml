@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="webview_title_text">#000000</color>
+    <color name="webview_right_text">#000000</color>
+    <color name="webview_title_background">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_333333">#333333</color>
+</resources>

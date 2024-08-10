@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/openAppSetting"
+        android:title="@string/app_setting"/>
+
+    <item
+        android:id="@+id/shareApk"
+        android:title="@string/share_apk"/>
+
+    <item
+        android:id="@+id/backupApk"
+        android:title="@string/backup_apk"/>
+</menu>

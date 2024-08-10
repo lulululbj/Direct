@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="sideBar"
+        app:title="@string/sidebar_switch" />
+
+    <Preference
+        app:key="sideBarShape"
+        app:title="@string/sidebar_shape" />
+
+    <luyao.direct.view.IconPreference
+        app:icon="@color/white"
+        app:key="sideBarIcon"
+        app:title="@string/float_window_icon" />
+
+    <Preference
+        app:key="sideBarSize"
+        app:title="@string/float_window_size" />
+
+    <com.jaredrummler.android.colorpicker.ColorPreferenceCompat
+        android:defaultValue="0x50000000"
+        android:key="sideBarColor"
+        android:title="@string/float_window_color" />
+
+    <PreferenceCategory app:title="@string/gesture">
+
+        <SwitchPreference
+            app:key="gestureVibrate"
+            app:title="@string/gesture_vibrate" />
+
+        <Preference
+            app:key="slideUp"
+            app:title="@string/slide_up" />
+
+        <Preference
+            app:key="slideDown"
+            app:title="@string/slide_down" />
+
+        <Preference
+            app:key="slideLeft"
+            app:title="@string/slide_left" />
+
+        <Preference
+            app:key="slideRight"
+            app:title="@string/slide_right" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/help">
+
+        <Preference
+            android:summary="@string/float_window_note"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

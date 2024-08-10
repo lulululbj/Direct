@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="40dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Icon"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/engineIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/luyao" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/name"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="14sp" />
+
+    <luyao.ktx.view.ClearEditText
+        android:id="@+id/engineName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="搜索引擎名称，必填"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/Url"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="14sp" />
+
+    <luyao.ktx.view.ClearEditText
+        android:id="@+id/engineUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="搜索引擎Url，使用 %s 代替关键字"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/url_scheme"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="14sp" />
+
+    <luyao.ktx.view.ClearEditText
+        android:id="@+id/engineScheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="@string/use_app_search_first"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/search_tag"
+        android:textColor="?android:textColorSecondary"
+        android:textSize="14sp" />
+
+    <luyao.ktx.view.ClearEditText
+        android:id="@+id/engineTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="-标签，可快速带出搜索引擎"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/specify_app"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/specifyAppIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_circlr_add"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/specifyApp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_circlr_add" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/need_show_in_panel"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/panelSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:checked="true" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/engineHelp"
+            style="@style/Engine_Edit_Menu_Bt"
+            android:text="@string/help"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/engineDelete"
+            style="@style/Engine_Edit_Menu_Bt"
+            android:text="@string/Delete"
+            android:textColor="@color/red" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/engineTest"
+            style="@style/Engine_Edit_Menu_Bt"
+            android:text="@string/test" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/engineConfirm"
+                style="@style/Engine_Edit_Menu_Bt"
+                android:text="@string/Confirm" />
+
+            <ProgressBar
+                android:id="@+id/engineProgress"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
