@@ -75,6 +75,9 @@ class DataViewModel @Inject constructor() : ViewModel() {
     val engineClickData = MutableLiveData<NewDirectEntity>()
 
     fun search(word: String, keyword: String = "") {
+        if (word.isNotEmpty()) {
+            MMKVConstants.lastSearch = word
+        }
         keyWords = word
         keyWords.let {
             when {

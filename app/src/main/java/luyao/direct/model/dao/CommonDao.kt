@@ -26,7 +26,6 @@ fun addDirectCount(id: String) {
 
 fun saveSearchHistory(keyWord: String, type: Int) {
     if (keyWord.isEmpty()) return
-    MMKVConstants.lastSearch = keyWord
     if (!MMKVConstants.saveHistory) return
     AppScope.launchIO {
         AppDatabase.getInstance(DirectApp.App).run {
