@@ -28,9 +28,13 @@ import luyao.direct.model.entity.SearchHistoryEntity
 import luyao.direct.ui.DirectActivity
 import luyao.direct.ui.settings.direct.AppDirectListActivity
 import luyao.direct.util.loadIcon
+import luyao.direct.view.DirectEditDialog
 import luyao.direct.view.getProperDirectDrawable
 import luyao.ktx.app.AppScope
 import luyao.ktx.ext.hideKeyboard
+import luyao.ktx.ext.isAppInstalled
+import luyao.ktx.ext.openAppSetting
+import luyao.ktx.ext.showConfirmDialog
 import luyao.ktx.ext.startActivity
 
 /**
@@ -84,28 +88,57 @@ class DirectViewDelegate(val activity: DirectActivity) :
         }
     }
 
-    private fun showPopMenu(view: View, directEntity: NewDirectEntity) {
-        PopupMenu(activity, view).apply {
-            menuInflater.inflate(R.menu.menu_direct, menu)
-            setOnMenuItemClickListener {
-                when (it.itemId) {
-                    R.id.menu_direct_see -> {
-                        activity.startActivity<AppDirectListActivity>(
-                            "packageName" to directEntity.packageName,
-                            "showAll" to false
-                        )
+    private fun showPopMenu(view: View, item: NewDirectEntity) {
+
+        PopupMenu(activity, view).run {
+            menuInflater.inflate(R.menu.menu_direct_edit, menu)
+            setOnMenuItemClickListener { menu ->
+                when (menu.itemId) {
+                    R.id.edit_direct -> {
+                        val directEditDialog  = DirectEditDialog(activity) {
+
+                        }
+                        directEditDialog.setDirect(item)
+                        directEditDialog.show()
                     }
-                    R.id.menu_direct_shortcuts -> {
-                        directEntity.createShortcut()
+                    R.id.test_direct -> {
+                        item.go(DirectApp.App)
                     }
-//                    R.id.menu_direct_share -> {
-//                        activity.shareText(directEntity.label, directEntity.scheme)
-//                    }
+                    R.id.add_direct_launcher -> {
+                        activity.showConfirmDialog(message = activity.getString(R.string.check_shortcut_permission),
+                            confirmText = R.string.has_authorization,
+                            cancelText = R.string.go_to_setting,
+                            onCancel = {
+                                DirectApp.App.openAppSetting(DirectApp.App.packageName)
+                            },
+                            onConfirm = {
+                                item.createShortcut()
+                            })
+
+                    }
                 }
                 true
             }
             show()
         }
+//        PopupMenu(activity, view).apply {
+//            menuInflater.inflate(R.menu.menu_direct, menu)
+//            setOnMenuItemClickListener {
+//                when (it.itemId) {
+//                    R.id.menu_direct_see -> {
+//                        activity.startActivity<AppDirectListActivity>(
+//                            "packageName" to directEntity.packageName,
+//                            "showAll" to false
+//                        )
+//                    }
+//                    R.id.menu_direct_shortcuts -> {
+//                        directEntity.createShortcut()
+//                    }
+//                }
+//                true
+//            }
+//            show()
+//        }
     }
 
     class ViewHolder(val binding: ItemAppBinding) : RecyclerView.ViewHolder(binding.root)

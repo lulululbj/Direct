@@ -155,7 +155,7 @@
     <string name="View">View</string>
     <string name="global_icon_pack">Global Icon Pack</string>
     <string name="launch_mode">Launch Mode</string>
-    <string name="content_on_home_page">Home page content order</string>
+    <string name="content_on_home_page">Home page content</string>
     <string name="quick_start">Quick start</string>
     <string name="assist_summary">If the system supports it, you can long press the Home button to start</string>
     <string name="assist_title">Set as assist app</string>

@@ -59,12 +59,15 @@ class GeekOptionsFragment : PreferenceFragmentCompat() {
         // 首页默认显示内容
         findPreference<Preference>("defaultShow")?.apply {
             if (MMKVConstants.defaultShow > 1) MMKVConstants.defaultShow = HomeMenuId.STAR
-            summary = if (MMKVConstants.defaultShow == HomeMenuId.STAR) getString(R.string.star_use) else getString(R.string.search_engine)
+            summary =
+                if (MMKVConstants.defaultShow == HomeMenuId.STAR) getString(R.string.star_use) else getString(
+                    R.string.search_engine
+                )
         }?.setOnPreferenceClickListener {
             MaterialDialog(requireActivity()).show {
                 cornerRadius(16f)
                 listItemsSingleChoice(
-                    items = listOf(getString(R.string.star_use), getString(R.string.search_engine)),
+                    items = listOf(getString(R.string.search_engine), getString(R.string.star_use)),
                     initialSelection = MMKVConstants.defaultShow
                 ) { _, index, _ ->
                     MMKVConstants.defaultShow = index

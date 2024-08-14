@@ -155,7 +155,7 @@
     <string name="View">视图</string>
     <string name="global_icon_pack">全局图标包</string>
     <string name="launch_mode">启动方式</string>
-    <string name="content_on_home_page">首页内容顺序</string>
+    <string name="content_on_home_page">首页内容</string>
     <string name="quick_start">快捷启动</string>
     <string name="assist_summary">如果系统支持，可以长按 Home 键启动</string>
     <string name="assist_title">设置为数字助理</string>
