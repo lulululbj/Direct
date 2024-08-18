@@ -82,6 +82,10 @@ class DirectEditDialog(val activity: FragmentActivity, private val onRefresh: ()
         setContentView(binding.root)
         window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
         window?.attributes?.width = ViewGroup.LayoutParams.MATCH_PARENT
+
+        setOnDismissListener {
+            onRefresh()
+        }
     }
 
     private fun initView() {
@@ -264,7 +268,6 @@ class DirectEditDialog(val activity: FragmentActivity, private val onRefresh: ()
                     binding.directProgress.visibility = View.INVISIBLE
                     toast(R.string.save_fail)
                 }
-                onRefresh.invoke()
             }
         }
     }
@@ -284,7 +287,7 @@ class DirectEditDialog(val activity: FragmentActivity, private val onRefresh: ()
         }
     }
 
-    private fun setPackageName(packageName: String) {
+    fun setPackageName(packageName: String) {
         selectPackageName = packageName
         val packageInfo = activity.packageManager.getPackageInfo(packageName, 0)
         val appName =

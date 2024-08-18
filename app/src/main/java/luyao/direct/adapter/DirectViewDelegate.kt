@@ -95,11 +95,12 @@ class DirectViewDelegate(val activity: DirectActivity) :
             setOnMenuItemClickListener { menu ->
                 when (menu.itemId) {
                     R.id.edit_direct -> {
-                        val directEditDialog  = DirectEditDialog(activity) {
-
-                        }
-                        directEditDialog.setDirect(item)
-                        directEditDialog.show()
+                        activity.showDirectEditDialog(item)
+//                        val directEditDialog  = DirectEditDialog(activity) {
+//
+//                        }
+//                        directEditDialog.setDirect(item)
+//                        directEditDialog.show()
                     }
                     R.id.test_direct -> {
                         item.go(DirectApp.App)

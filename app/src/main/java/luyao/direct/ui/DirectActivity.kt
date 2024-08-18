@@ -214,6 +214,7 @@ class DirectActivity : DirectBaseActivity(),
                 val packageName = it.getStringExtra("packageName") ?: ""
                 if (directEditDialog?.isShowing == true) {
                     directEditDialog?.setAppIcon(packageName)
+                    directEditDialog?.setPackageName(packageName)
                 }
             }
         }
@@ -572,6 +573,7 @@ class DirectActivity : DirectBaseActivity(),
                 if (directEditDialog == null) {
                     directEditDialog = DirectEditDialog(this) {
                         vm.updateDirect()
+                        vm.search(binding.searchEt.text.toString())
                     }
                 }
                 directEditDialog?.setDirect(packageName, scheme, exported)
@@ -980,8 +982,22 @@ class DirectActivity : DirectBaseActivity(),
         if (directEditDialog == null) {
             directEditDialog = DirectEditDialog(this) {
                 vm.updateDirect()
+                vm.search(binding.searchEt.text.toString())
             }
         }
+        if (!directEditDialog!!.isShowing) {
+            directEditDialog!!.show()
+        }
+    }
+
+    fun showDirectEditDialog(item: NewDirectEntity) {
+        if (directEditDialog == null) {
+            directEditDialog = DirectEditDialog(this) {
+                vm.updateDirect()
+                vm.search(binding.searchEt.text.toString())
+            }
+        }
+        directEditDialog!!.setDirect(item)
         if (!directEditDialog!!.isShowing) {
             directEditDialog!!.show()
         }
